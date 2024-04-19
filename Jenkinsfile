@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Unit Testing') {
             steps {
-                sh 'npm run test'
+                sh 'npm run test_headless'
             }
         }
         stage('SonarQube analysis') {
