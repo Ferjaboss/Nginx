@@ -38,8 +38,8 @@ pipeline {
         stage ('Push Docker Image to Nexus') {
             steps {
                 sh 'docker login -u devops -p devops http://master:9001'
-                sh 'docker tag Angular:1.0 master:9001/Angular:1'
-                sh 'docker push master:9001/Angular:1'
+                sh 'docker tag Angular:1.0 master:9001/angular:1'
+                sh 'docker push master:9001/angular:1'
             }
         }
         stage('Deploy to Kubernetes') {
