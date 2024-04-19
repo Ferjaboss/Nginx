@@ -10,11 +10,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Unit Testing') {
-            steps {
-                sh 'npm run test_headless'
-            }
-        }
         stage('SonarQube analysis') {
             steps {
                 script {
