@@ -5,14 +5,6 @@ pipeline {
         scannerHome = tool 'Sonar';
     }
     stages {
-        stage('setup environment') {
-            steps {
-                script {
-                    sh '/home/master/.nvm/nvm install ${node}'
-                    sh '/home/master/.nvm/nvm use ${node}'
-                }
-            }
-        }
         stage('Install dependencies') {
             steps {
                 sh 'npm install'
