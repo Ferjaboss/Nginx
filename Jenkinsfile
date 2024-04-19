@@ -8,8 +8,8 @@ pipeline {
         stage('setup environment') {
             steps {
                 script {
-                    sh 'nvm install ${node}'
-                    sh 'nvm use ${node}'
+                    sh '/home/master/.nvm/nvm install ${node}'
+                    sh '/home/master/.nvm/nvm use ${node}'
                 }
             }
         }
