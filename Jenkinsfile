@@ -24,9 +24,14 @@ pipeline {
                 sh 'npm run build'
             }
         }
+        stage ('Unit Test') {
+            steps {
+                sh 'echo "Unit Test"'
+            }
+        }
         stage ('Build Docker Image') {
             steps {
-                sh 'docker build -t Angular:1.0 .'
+                sh 'docker build -t angular:1.0 .'
             }
         }
         stage ('Push Docker Image to Nexus') {

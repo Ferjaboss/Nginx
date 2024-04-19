@@ -16,7 +16,7 @@ spec:
       - name: masterkey
       containers:
       - name: Angular-app
-        image: master:9001/Angular:1
+        image: master:9001/angular:1
         ports:
         - containerPort: 80
 ---
