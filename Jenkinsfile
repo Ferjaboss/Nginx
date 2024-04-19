@@ -10,6 +10,11 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage ('Unit Test') {
+            steps {
+                sh 'echo "Unit Test"'
+            }
+        }
         stage('SonarQube analysis') {
             steps {
                 script {
@@ -24,11 +29,7 @@ pipeline {
                 sh 'npm run build'
             }
         }
-        stage ('Unit Test') {
-            steps {
-                sh 'echo "Unit Test"'
-            }
-        }
+        
         stage ('Build Docker Image') {
             steps {
                 sh 'docker build -t angular:1.0 .'
