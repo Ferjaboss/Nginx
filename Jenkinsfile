@@ -1,6 +1,9 @@
 def node = '18'
 pipeline {
     agent any
+    tools {
+        nodejs 'node-18'
+    }
     environment {
         scannerHome = tool 'Sonar';
     }
